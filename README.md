@@ -36,11 +36,11 @@ The mappings file is broken down as follows:
 
 The fields in each segment are:
 
-1. `source_start_column`: The one-based starting column (in text mode) or offset (in binary mode) in the source file.
-2. `source_end_column`: The one-based ending column (in text mode) or offset (in binary mode) in the source file.
+1. `source_start_column`: The one-based starting column (in text mode) or zero-based offset (in binary mode) in the source file.
+2. `source_end_column`: The one-based ending column (in text mode) or zero-based offset (in binary mode) in the source file.
 3. `destination`: The zero-based index of the destination file entry into the destinations list file.
-4. `destination_start_column`: The one-based starting column (in text mode) or offset (in binary mode) in the destination file.
-5. `destination_end_column`: The one-based ending column (in text mode) or offset (in binary mode) in the destination file.
+4. `destination_start_column`: The one-based starting column (in text mode) or zero-based offset (in binary mode) in the destination file.
+5. `destination_end_column`: The one-based ending column (in text mode) or zero-based offset (in binary mode) in the destination file.
 6. `source_start_line`: The one-based starting line in the source file. *This field is not present when the source file is in binary mode*.
 7. `source_end_line`: The one-based ending line in the source file. *This field is not present when the source file is in binary mode*.
 8. `destination_start_line`: The one-based starting line in the destination file. *This field is not present when the destination file is in binary mode*.
