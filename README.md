@@ -5,9 +5,10 @@ Based on [Source Map](https://tc39.es/source-map/).
 
 ## Features
 
-- Better suited for mapping between entire multi-file projects:
+- Better suited for mapping between medium/large multi-file projects:
     - Centralized sources/destinations list files.
     - Individual mappings file for each source file.
+    - Mappings overlays.
 - More focus in being human-friendly than machine-friendly.
 - Hash-based tracking of mapped files to detect out-of-sync mappings.
 - Supports mapping files in text or binary format.
@@ -21,9 +22,10 @@ Based on [Source Map](https://tc39.es/source-map/).
 
 - **Source file**: A file that is being mapped from.
 - **Destination file**: A file that is being mapped to.
-- **Sources list file**: A `sources.rosetta` file that lists source files and their formats.
-- **Destinations list file**: A `destinations.rosetta` file that lists destination files and their formats.
-- **Mappings file**: A `<source-file>.rosetta` file that maps one source file to one or more destination files.
+- **Mappings overlay**: A named grouping of mappings files that can be overlayed hierarchically. The base overlay is anonymous.
+- **Sources list file**: A `sources{.<overlay-name>}.rosetta` file that lists source files and their formats.
+- **Destinations list file**: A `destinations{.<overlay-name>}.rosetta` file that lists destination files and their formats.
+- **Mappings file**: A `<source-file>{.<overlay-name>}.rosetta` file that maps one source file to one or more destination files.
 - **Source root path**: The filesystem path under which all source files are stored.
 - **Destination root path**: The filesystem path under which all destination files are stored.
 - **Mappings root path**: The filesystem path under which the sources/destinations list files and all mappings files are stored. The mappings files must be stored in the same relative paths of their source files.
@@ -52,7 +54,7 @@ The fields in each range are:
 
 1. `source_start_column_offset`: The starting one-based column (in text format) or zero-based offset (in binary format) in the source file.
 2. `source_end_column_offset`: The ending one-based column (in text format) or zero-based offset (in binary format) in the source file.
-3. `destination`: The zero-based index of the destination file entry into the destinations list file.
+3. `destination`: The zero-based index of the destination file entry into the destinations list file. The index of file entries continue from the previous overlay.
 4. `destination_start_column_offset`: The starting one-based column (in text format) or zero-based offset (in binary format) in the destination file.
 5. `destination_end_column_offset`: The ending one-based column (in text format) or zero-based offset (in binary format) in the destination file.
 6. `source_start_line`: The starting one-based line in the source file. *This field is not present when the source file is in binary format*.
