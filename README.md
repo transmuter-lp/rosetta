@@ -41,8 +41,8 @@ The sources/destinations list files are broken down as follows:
 The fields in each file entry are:
 
 1. `file_path`: The path of the file, relative to the source/destination root path.
-2. `file_hash`: The SHA-256 hash of the file.
-3. `file_format`: The format of the file, can be either `t` for text or `b` for binary.
+2. `file_format`: The format of the file, can be either `t` for text or `b` for binary.
+3. `file_hash`: The SHA-256 hash of the file.
 
 The mappings file is broken down as follows:
 
