@@ -52,12 +52,12 @@ The mappings file is broken down as follows:
 
 The fields in each range are:
 
-1. `source_start_column_offset`: The starting one-based column (in text format) or zero-based offset (in binary format) in the source file.
-2. `source_end_column_offset`: The ending one-based column (in text format) or zero-based offset (in binary format) in the source file.
-3. `destination`: The zero-based index of the destination file entry into the destinations index. The index of file entries continue from the previous overlay.
-4. `destination_start_column_offset`: The starting one-based column (in text format) or zero-based offset (in binary format) in the destination file.
-5. `destination_end_column_offset`: The ending one-based column (in text format) or zero-based offset (in binary format) in the destination file.
-6. `source_start_line`: The starting one-based line in the source file. *This field is not present when the source file is in binary format*.
-7. `source_end_line`: The ending one-based line in the source file. *This field is not present when the source file is in binary format*.
-8. `destination_start_line`: The starting one-based line in the destination file. *This field is not present when the destination file is in binary format*.
-9. `destination_end_line`: The ending one-based line in the destination file. *This field is not present when the destination file is in binary format*.
+1. `source_start_line`: The starting one-based line in the source file. *This field is not present when the source file is in binary format*.
+2. `source_start_column_offset`: The starting one-based column (in text format) or zero-based offset (in binary format) in the source file.
+3. `source_end_line`: The ending one-based line in the source file. *This field is not present when the source file is in binary format*.
+4. `source_end_column_offset`: The ending one-based column (in text format) or zero-based offset (in binary format) in the source file.
+5. `destination`: The zero-based index of the destination file entry into the destinations index. The index of file entries continue from the previous overlay.
+6. `destination_start_line`: The starting one-based line in the destination file. *This field is not present when the destination file is in binary format*.
+7. `destination_start_column_offset`: The starting one-based column (in text format) or zero-based offset (in binary format) in the destination file.
+8. `destination_end_line`: The ending one-based line in the destination file. *This field is not present when the destination file is in binary format*.
+9. `destination_end_column_offset`: The ending one-based column (in text format) or zero-based offset (in binary format) in the destination file.
